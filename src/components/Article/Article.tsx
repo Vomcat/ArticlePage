@@ -20,8 +20,6 @@ const Article = () => {
     if (loading === "idle") dispatch(getArticleData());
   }, []);
 
-  console.log(loading);
-
   if (error) return <>{error}</>;
   if (loading === "pending" || loading === "idle") return <>loading...</>;
 
