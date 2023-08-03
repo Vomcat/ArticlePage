@@ -1,0 +1,12 @@
+import { configureStore } from "@reduxjs/toolkit";
+
+import articleReducer from "./slices";
+
+const store = configureStore({
+  reducer: { asrticleState: articleReducer },
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+export default store;

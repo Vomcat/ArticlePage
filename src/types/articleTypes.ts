@@ -1,3 +1,9 @@
+export interface ArticleData {
+  articleData: DataProps;
+  loading: "idle" | "pending" | "succeeded" | "failed";
+  error: null | unknown;
+}
+
 export interface DataProps {
   author: DataStringProps;
   body: DataArrayProps;
