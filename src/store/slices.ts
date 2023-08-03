@@ -38,7 +38,7 @@ const articleSlice = createSlice({
     });
     builder.addCase(getArticleData.rejected, (state, action) => {
       state.loading = "failed";
-      state.error = action.error.message;
+      state.error = action.payload;
     });
   },
 });
